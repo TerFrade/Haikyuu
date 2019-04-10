@@ -23,7 +23,7 @@ namespace zENPLOYEE
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-
+        
         private void ButtonClick(object sender)
         {
             Button clickedButton = (Button)sender;
@@ -32,7 +32,9 @@ namespace zENPLOYEE
             foreach (Button btn in clickedButton.Parent.Controls.OfType<Button>())
             {
                 if (btn != clickedButton)
-                    btn.BackColor = Color.FromArgb(50, 58, 73);
+                {
+                    btn.BackColor = Color.FromArgb(59, 67, 82);
+                }
             }
         }
 
