@@ -16,7 +16,13 @@ namespace zENPLOYEE
         public MainForm()
         {
             InitializeComponent();
+            Load += MainForm_Load;
         }
+        private void MainForm_Load(Object sender, EventArgs e)
+        {
+            btnHome.PerformClick();
+        }
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         [DllImportAttribute("user32.dll")]
@@ -49,6 +55,12 @@ namespace zENPLOYEE
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
 
+        private void lblHeader_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        }
+
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
@@ -62,21 +74,54 @@ namespace zENPLOYEE
         private void btnHome_Click(object sender, EventArgs e)
         {
             ButtonClick(sender);
+            if (!pnlDisplay.Controls.Contains(uscHome.Instance))
+            {
+                pnlDisplay.Controls.Add(uscHome.Instance);
+                uscHome.Instance.Dock = DockStyle.Fill;
+                uscHome.Instance.BringToFront();
+            }
+            else
+                uscHome.Instance.BringToFront();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnTime_Click(object sender, EventArgs e)
         {
             ButtonClick(sender);
+            if (!pnlDisplay.Controls.Contains(uscTime.Instance))
+            {
+                pnlDisplay.Controls.Add(uscTime.Instance);
+                uscTime.Instance.Dock = DockStyle.Fill;
+                uscTime.Instance.BringToFront();
+            }
+            else
+                uscTime.Instance.BringToFront();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnLeave_Click(object sender, EventArgs e)
         {
             ButtonClick(sender);
+            if (!pnlDisplay.Controls.Contains(uscLeave.Instance))
+            {
+                pnlDisplay.Controls.Add(uscLeave.Instance);
+                uscLeave.Instance.Dock = DockStyle.Fill;
+                uscLeave.Instance.BringToFront();
+            }
+            else
+                uscLeave.Instance.BringToFront();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnSettings_Click(object sender, EventArgs e)
         {
             ButtonClick(sender);
+            if (!pnlDisplay.Controls.Contains(uscSettings.Instance))
+            {
+                pnlDisplay.Controls.Add(uscSettings.Instance);
+                uscSettings.Instance.Dock = DockStyle.Fill;
+                uscSettings.Instance.BringToFront();
+            }
+            else
+                uscSettings.Instance.BringToFront();
         }
+        
     }
 }

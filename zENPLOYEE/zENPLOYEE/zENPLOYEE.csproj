@@ -55,15 +55,51 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="uscHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uscHome.Designer.cs">
+      <DependentUpon>uscHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uscLeave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uscLeave.Designer.cs">
+      <DependentUpon>uscLeave.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uscSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uscSettings.Designer.cs">
+      <DependentUpon>uscSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uscTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uscTime.Designer.cs">
+      <DependentUpon>uscTime.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uscHome.resx">
+      <DependentUpon>uscHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uscLeave.resx">
+      <DependentUpon>uscLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uscSettings.resx">
+      <DependentUpon>uscSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uscTime.resx">
+      <DependentUpon>uscTime.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
