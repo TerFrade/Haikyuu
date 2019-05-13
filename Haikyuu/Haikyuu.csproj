@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7CE98E12-5570-48CC-B814-7FD4CA52EBBF}</ProjectGuid>
+    <ProjectGuid>{5A31CF7B-EE09-4AC4-BDF3-5658BE5C0891}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>zENPLOYEE</RootNamespace>
-    <AssemblyName>zENPLOYEE</AssemblyName>
+    <RootNamespace>Haikyuu</RootNamespace>
+    <AssemblyName>Haikyuu</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -23,7 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,7 +31,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,67 +46,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uscHome.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uscHome.Designer.cs">
-      <DependentUpon>uscHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uscLeave.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uscLeave.Designer.cs">
-      <DependentUpon>uscLeave.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="uscSettings.cs">
+    <Compile Include="Views\uscHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uscSettings.Designer.cs">
-      <DependentUpon>uscSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uscTime.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uscTime.Designer.cs">
-      <DependentUpon>uscTime.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uscHome.resx">
+    <Compile Include="Views\uscHome.Designer.cs">
       <DependentUpon>uscHome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="uscLeave.resx">
-      <DependentUpon>uscLeave.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uscSettings.resx">
-      <DependentUpon>uscSettings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uscTime.resx">
-      <DependentUpon>uscTime.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\uscHome.resx">
+      <DependentUpon>uscHome.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -118,18 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\letter-x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\letter-x1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\403f4e39-3f9f-452f-8581-bb5ca59872a1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

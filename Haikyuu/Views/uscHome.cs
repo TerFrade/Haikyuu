@@ -8,21 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace zENPLOYEE
+namespace Haikyuu.Views
 {
-    public partial class uscLeave : UserControl
+    public partial class uscHome : UserControl
     {
-        private static uscLeave instance;
+        private static uscHome instance;
 
-        public static uscLeave Instance{
+        public static uscHome Instance
+        {
             get
             {
                 if (instance == null)
-                    return instance = new uscLeave();
+                    return instance = new uscHome();
                 return instance;
             }
         }
-        public uscLeave()
+
+        public uscHome()
         {
             InitializeComponent();
         }
